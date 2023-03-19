@@ -1,7 +1,7 @@
 import Head from 'next/head'
-import Image from 'next/image'
+import 'react-multi-carousel/lib/styles.css';
 import { Inter } from 'next/font/google'
-import  { Layout }  from '@components'
+import  { Hero, Layout }  from '@components'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,10 +14,9 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className=''>
+      <main className='bg-slate-200'>
           <Layout>
-            <h1>hello</h1>
-            <h1>hello</h1>
+            <Hero />
           </Layout>
       </main>
     </>
