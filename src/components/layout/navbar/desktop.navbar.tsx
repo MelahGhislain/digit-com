@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { AiOutlineHeart} from 'react-icons/ai'
 import {BsArrowRepeat} from 'react-icons/bs'
 import {IoPersonOutline, } from 'react-icons/io5'
@@ -9,11 +9,12 @@ import SearchBar from '../../searchBar'
 
 const DesktopNavbar = () => {
   const [wasScrolled, serWasScrolled] = useState<boolean>(false)
-
-  window.onscroll = () => {
-    serWasScrolled(window.pageYOffset === 0? false: true)
-    return () => window.onscroll = null
-}
+  useEffect(()=>{
+    window.onscroll = () => {
+      serWasScrolled(window.pageYOffset === 0? false: true)
+      return () => window.onscroll = null
+    }
+  }, [])
 
   return (
     <>
@@ -29,7 +30,7 @@ const DesktopNavbar = () => {
             </div>
         }
 
-        <div className={`bg-slate-900 flex items-center justify-between pad-x border-t border-slate-800 py-4 ${wasScrolled? 'fixed top-0 w-screen': ""}`}>
+        <div className={`bg-slate-900 flex items-center justify-between pad-x border-t border-slate-800 py-4 ${wasScrolled? 'fixed top-0 w-screen z-50': ""}`}>
           <div className='text-xl font-bold'>Digitic.</div>
           <div className='bg-red-500 w-[25rem]'>
             <SearchBar />

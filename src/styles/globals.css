@@ -11,3 +11,6 @@
 .primary{ 
     @apply text-yellow-500
 }
+.hover{
+    @apply transition-all duration-300 hover:opacity-80
+}
