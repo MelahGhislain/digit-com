@@ -23,6 +23,9 @@ import CategoryACC from './acc.jpg'
 import CategoryHeadphone from './headphone.jpg'
 import CategoryHomeApp from './homeapp.jpg'
 
+import CollectionWatch from './watch.jpg'
+import Tab1 from './tab1.jpg'
+
 export {
     // Hero banners
     MainBanner1,
@@ -47,4 +50,7 @@ export {
     CategoryACC,
     CategoryHeadphone,
     CategoryHomeApp,
+
+    CollectionWatch,
+    Tab1,
 }
