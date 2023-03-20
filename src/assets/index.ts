@@ -25,6 +25,9 @@ import CategoryHomeApp from './homeapp.jpg'
 
 import CollectionWatch from './watch.png'
 import Tab1 from './tab1.jpg'
+// blog
+import Blog1 from './blog-1.jpg'
+import Newslatter from './newsletter.png'
 
 export {
     // Hero banners
@@ -53,4 +56,7 @@ export {
 
     CollectionWatch,
     Tab1,
+
+    Blog1,
+    Newslatter,
 }

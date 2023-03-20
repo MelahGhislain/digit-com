@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import { ServiceItem } from './_utils'
+import { ServiceItem } from '../features/home/_utils'
 type ServiceCardProps ={
     data: ServiceItem
 }

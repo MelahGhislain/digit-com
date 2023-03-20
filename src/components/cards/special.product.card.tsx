@@ -4,6 +4,7 @@ import Image from 'next/image'
 import React from 'react'
 import { AiOutlineHeart, AiOutlineStar, AiTwotoneHeart, AiTwotoneStar } from 'react-icons/ai';
 import Carousel from 'react-multi-carousel'
+import Button from '../button';
 
 const SpecialProductCard = () => {
     const responsive = {
@@ -73,7 +74,7 @@ const SpecialProductCard = () => {
               <div className='bg-green-500 w-[80%] h-full'></div>
             </div>
 
-            <button className='text-xs text-white bg-slate-900 px-3 py-2 rounded-full mt-2'>Add to cart</button>
+            <Button>Add to cart</Button>
 
           </div>
         </div>

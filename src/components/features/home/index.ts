@@ -1,6 +1,7 @@
 export {default as Hero} from './hero'
-export {default as ServiceCard} from './service.card'
+export {default as ServiceCard} from '../../cards/service.card'
 export {default as Category} from './category'
 export {default as Collection} from './collection'
 export {default as SpecialProduct} from './special.product'
 export {default as PopularProduct} from './popular.product'
+export {default as Blogs} from './blog.section'

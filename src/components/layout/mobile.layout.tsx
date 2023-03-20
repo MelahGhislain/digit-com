@@ -2,6 +2,7 @@ import { LayoutProp } from './_utils'
 import React, { useState } from 'react'
 import { MobileNavbar } from './navbar'
 import {NavDrawer} from './navbar'
+import Footer from './footer'
 type MobileProps = LayoutProp
 
 const MobileLayout: React.FC<MobileProps> = ({children}) => {
@@ -11,7 +12,10 @@ const MobileLayout: React.FC<MobileProps> = ({children}) => {
     <div className='lg:hidden'>
         <NavDrawer setOpen={setOpenDrawer} open={openDrawer}/>
         <MobileNavbar setOpenDrawer={setOpenDrawer} openDrawer={openDrawer}>
-            {children}
+            <>
+              {children}
+              <Footer />
+            </>
         </MobileNavbar>
     </div>
   )

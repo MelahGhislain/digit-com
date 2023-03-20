@@ -11,33 +11,33 @@ const PopularProduct = () => {
     <section className='pad-x mt-10'>
        <Heading>Popular Products</Heading>
         <div>
-        <div className='mb-10'>
-            <div className=' flex items-center overflow-x-scroll gap-6 py-5'>
-                    <div className='bg-white w-[15rem] md:w-[16rem] h-[20rem] md:h-[24rem] rounded-lg flex-none'>
-                        <div className='flex flex-col p-4 overflow-auto gap-y-4 h-full'>
-                            {
-                                catogoryItems.map(item => (
-                                    <Link key={item.id} href='/'>
-                                        <div className='flex items-center '>
-                                            <span className='h-10 w-10'>
-                                                <Image src={item.image} alt={item.title} className='w-full h-full object-cover' />
-                                            </span>
-                                            <p className='text-sm'>{item.title}</p>
-                                        </div>  
-                                    </Link>
-                                ))
-                            }
+            <div className='mb-10'>
+                <div className=' flex items-center overflow-x-scroll gap-6 py-5'>
+                        <div className='bg-white w-[15rem] md:w-[16rem] h-[20rem] md:h-[24rem] rounded-lg flex-none'>
+                            <div className='flex flex-col p-4 overflow-auto gap-y-4 h-full'>
+                                {
+                                    catogoryItems.map(item => (
+                                        <Link key={item.id} href='/'>
+                                            <div className='flex items-center '>
+                                                <span className='h-10 w-10'>
+                                                    <Image src={item.image} alt={item.title} className='w-full h-full object-cover' />
+                                                </span>
+                                                <p className='text-sm'>{item.title}</p>
+                                            </div>  
+                                        </Link>
+                                    ))
+                                }
+                            </div>
                         </div>
-                    </div>
 
-                    <Card />
-                    {
-                        collectionData.map(item => (
-                            <CollectionCard1 key={item.id} data={item} />
-                        ))
-                    }
+                        <Card />
+                        {
+                            collectionData.map(item => (
+                                <CollectionCard1 key={item.id} data={item} />
+                            ))
+                        }
+                </div>
             </div>
-        </div>
         </div>
     </section>
   )
