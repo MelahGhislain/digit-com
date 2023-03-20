@@ -8,7 +8,7 @@ const Category = () => {
   return (
     <section className='pad-x'>
         <h2 className='md:hidden mb-8 mt-6 font-semibold text-3xl'> Category</h2>
-        <div className='rounded-lg border-2 bg-white p-6'>
+        <div className='rounded-lg bg-white p-6'>
             <div className='flex overflow-x-auto lg:grid lg:grid-cols-5 justify-start gap-4'>
                 {
                     catogoryItems.map(item => (

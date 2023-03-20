@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import 'react-multi-carousel/lib/styles.css';
-import  { Category, Collection, Hero, Layout, ServiceCard, SpecialProduct }  from '@components'
+import  { Category, Collection, Hero, Layout, PopularProduct, ServiceCard, SpecialProduct }  from '@components'
 import { Service1, Service2, Service3, Service5 } from '@assets';
 
 const ServiceItems = [
@@ -53,6 +53,7 @@ export default function Home() {
             <Category />
             <Collection />
             <SpecialProduct />
+            <PopularProduct />
 
             <div className='pt-20'></div>
           </Layout>
