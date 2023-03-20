@@ -23,7 +23,7 @@ import CategoryACC from './acc.jpg'
 import CategoryHeadphone from './headphone.jpg'
 import CategoryHomeApp from './homeapp.jpg'
 
-import CollectionWatch from './watch.jpg'
+import CollectionWatch from './watch.png'
 import Tab1 from './tab1.jpg'
 
 export {

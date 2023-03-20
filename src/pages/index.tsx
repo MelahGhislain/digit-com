@@ -40,7 +40,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className='bg-slate-200'>
+      <main className='bg-slate-100'>
           <Layout>
             <Hero />
             <div className='pad-x py-8 hidden md:grid md:grid-cols-2 lg:grid-cols-4 items-center justify-between gap-6 '>
