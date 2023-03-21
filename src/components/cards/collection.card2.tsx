@@ -6,11 +6,12 @@ import React from 'react'
 type CollectionItemProp = {
   data: CollectionItem
   isDark?: boolean
+  className?: string
 }
 
-const CollectionCard2: React.FC<CollectionItemProp> = ({data, isDark}) => {
+const CollectionCard2: React.FC<CollectionItemProp> = ({data, isDark, className}) => {
   return (
-    <div className={`${isDark? 'bg-black text-white': 'bg-white'} w-[14rem] md:w-[16rem] h-[18rem] md:h-[20rem] overflow-hidden rounded-lg flex-none`}>
+    <div className={`${isDark? 'bg-black text-white': 'bg-white'} w-[14rem] md:w-[16rem] h-[18rem] md:h-[20rem] overflow-hidden rounded-lg flex-none ${className}`}>
       <div className='flex flex-col p-3 py-6'>
         <h5 className={`${isDark? 'text-neutral-300' : 'text-neutral-500'}  text-md font-semibold`}>{data.title}</h5>
         <p className='text-2xl font-bold'>{data.title}</p>

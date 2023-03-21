@@ -3,8 +3,8 @@ import { MobileNavbarProps } from './_utils'
 import {FiSearch} from 'react-icons/fi'
 import {AiOutlineMenu, AiOutlineHeart, AiFillHeart, AiOutlineClose} from 'react-icons/ai'
 import {BsArrowRepeat} from 'react-icons/bs'
-import {IoPersonOutline, IoPersonSharp, } from 'react-icons/io5'
-import {HiShoppingCart, HiOutlineShoppingCart} from 'react-icons/hi'
+import { IoPersonOutline } from 'react-icons/io5'
+import {HiShoppingCart, HiOutlineShoppingCart, HiHome} from 'react-icons/hi'
 import Link from 'next/link'
 
 const MobileNavbar: React.FC<MobileNavbarProps> = ({children, openDrawer, setOpenDrawer}) => {
@@ -41,29 +41,34 @@ const MobileNavbar: React.FC<MobileNavbarProps> = ({children, openDrawer, setOpe
                 <ul className='flex justify-between items-center'>
                     <li className=''>
                         <Link href='/' className='flex flex-col justify-center items-center text-2xl'>
+                            <HiHome />
+                            <span className='text-sm mt-1 '>Home</span>
+                        </Link>
+                    </li>
+                    <li className=''>
+                        <Link href='/products' className='flex flex-col justify-center items-center text-2xl'>
                             <BsArrowRepeat />
                             <span className='text-sm mt-1 '>Products</span>
                         </Link>
                     </li>
-                    <li>
+                    {/* <li>
                         <Link href='/' className='flex flex-col justify-center items-center text-2xl'>
                             <AiOutlineHeart />
-                            {/* <AiFillHeart /> */}
                             <span className='text-sm mt-1 '>Favorite</span>
                         </Link>
-                    </li>
+                    </li> */}
                     <li>
-                        <Link href='/' className='flex flex-col justify-center items-center text-2xl'>
+                        <Link href='/account' className='flex flex-col justify-center items-center text-2xl'>
                             <IoPersonOutline />
                             {/* <IoPersonSharp /> */}
                             <span className='text-sm mt-1 '>Profile</span>
                         </Link>
                     </li>
                     <li>
-                        <Link href='/' className='flex flex-col justify-center items-center text-2xl'>
+                        <Link href='/cart' className='flex flex-col justify-center items-center text-2xl'>
                             <HiOutlineShoppingCart />
                             {/* <HiShoppingCart /> */}
-                            <span className='text-sm mt-1 '>Favorite</span>
+                            <span className='text-sm mt-1 '>Cart</span>
                         </Link>
                     </li>
                 </ul>
