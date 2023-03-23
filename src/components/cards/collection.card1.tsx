@@ -27,10 +27,10 @@ const CollectionCard1: React.FC<CollectionItemProp> = ({data, className, priceTo
         </div>
         
       </div>
-      <div className='flex flex-col p-2 relative'>
+      <div className={`flex flex-col p-2 relative ${priceTop? 'mt-6': ''}`}>
         <div className='flex items-center justify-between'>
           <h5 className='text-orange-700 text-md font-semibold'>{data.title}</h5>
-          {priceTop && <p className='text-gray-600 text-sm'>${data.price}</p>}
+          {priceTop && <p className='text-gray-600 text-sm mr-1'>${data.price}</p>}
         </div>
         <p className='text-sm line-clamp-2 my-2 text-slate-600'>{data.description}</p>
         <div className='flex items-center mb-1 text-gray-400'>
@@ -46,7 +46,7 @@ const CollectionCard1: React.FC<CollectionItemProp> = ({data, className, priceTo
           }
         </div>
         <div className={`text-gray-600 text-medium`}>
-          <p>${data.price}</p>
+        {!priceTop && <p>${data.price}</p>}
         </div>
       </div>
     </div>

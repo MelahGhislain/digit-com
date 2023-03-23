@@ -28,12 +28,12 @@ export default function Product() {
                 <div className='flex gap-4 pad-x '>
                     <section className='flex-none w-[30%] lg:w-[20%] my-4 hidden md:block'>
                         <div className='rounded bg-white w-full p-4'>
-                            <h2 className='text-lg font-semibold'>Shop by Category</h2>
+                            <h2 className='text-lg font-semibold text-neutral-700'>Shop by Category</h2>
                             <ul>
                                 {
                                     category.map(item => (
                                         <Link key={item.name} href='/speaker'>
-                                            <li className='text-sm my-1 py-1'>{item.name}</li>
+                                            <li className='text-sm my-1 py-1 text-slate-500 '>{item.name}</li>
                                         </Link>
 
                                     ))
@@ -42,11 +42,11 @@ export default function Product() {
                         </div>
                         {/* Filter by */}
                         <div className='rounded bg-white w-full p-4 mt-4'>
-                            <h2 className='text-lg font-semibold'>Filter By</h2>
+                            <h2 className='text-lg font-semibold text-neutral-700'>Filter By</h2>
                             <ul>
                                 {
                                     category.map(item => (
-                                        <li key={item.name} className='text-sm my-1 py-1'>{item.name}</li>
+                                        <li key={item.name} className='text-sm my-1 py-1 text-slate-500'>{item.name}</li>
                                     ))
                                 }
                             </ul>

@@ -83,7 +83,7 @@ const Footer = () => {
                     </ul>
                 </div>
             </div>
-            <div className='pad-x border-t border-slate-700'>
+            <div className='pad-x border-t border-slate-700 text-center md:text-start'>
                 <p className='py-4 text-sm'> 
                     &copy; 2023 Rights Powered by Delux
                 </p>
