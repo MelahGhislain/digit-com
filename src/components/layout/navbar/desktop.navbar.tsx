@@ -61,13 +61,15 @@ const DesktopNavbar = () => {
                 </div>
               </span>
 
-              <button className='flex items-center'>
-                <HiOutlineShoppingCart className='text-3xl font-bold' />
+              <span className='flex items-center'>
+                <Link href='/cart'>
+                  <HiOutlineShoppingCart className='text-3xl font-bold' />
+                </Link>
                 <div className='flex flex-col text-sm ml-2 items-center'>
                   <div className='h-[20px] w-[20px] bg-primary rounded-lg text-xs flex items-center justify-center '>0</div>
                   <p>$99.99</p>
                 </div>
-              </button>
+              </span>
             </div>
           </div>
         </div>

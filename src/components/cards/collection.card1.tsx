@@ -4,6 +4,7 @@ import Image from 'next/image'
 import React from 'react'
 import { AiOutlineHeart, AiOutlineStar, AiTwotoneHeart, AiTwotoneStar } from 'react-icons/ai'
 import Badge from '../badge'
+import RatingStars from './ratingStars'
 
 type CollectionItemProp = {
   data: CollectionItem
@@ -33,18 +34,7 @@ const CollectionCard1: React.FC<CollectionItemProp> = ({data, className, priceTo
           {priceTop && <p className='text-gray-600 text-sm mr-1'>${data.price}</p>}
         </div>
         <p className='text-sm line-clamp-2 my-2 text-slate-600'>{data.description}</p>
-        <div className='flex items-center mb-1 text-gray-400'>
-          {
-            new Array(data.rating).fill(null).map((_, index) => (
-              <AiTwotoneStar key={index} className='text-yellow-500'/>
-            ))
-          }
-          {
-            new Array(5 - data.rating).fill(null).map((_, index) => (
-              <AiOutlineStar key={index} />
-            ))
-          }
-        </div>
+        <RatingStars rating={3} />
         <div className={`text-gray-600 text-medium`}>
         {!priceTop && <p>${data.price}</p>}
         </div>
