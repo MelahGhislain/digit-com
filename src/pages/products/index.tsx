@@ -51,6 +51,9 @@ export default function Product() {
                                         <li key={item.name} className='text-sm my-1 py-1 text-slate-500'>{item.name}</li>
                                     ))
                                 }
+                                <li>
+                                    <h2 className='font-semibold'>Price</h2>
+                                </li>
                             </ul>
                         </div>
                         {/* Related product */}
@@ -77,7 +80,7 @@ export default function Product() {
                             </ul>
                         </div>
                     </section>
-                    
+
                     <section className='flex-1 my-4'>
                         <div className='py-1 flex justify-between bg-white rounded px-2'>
                             <div className='flex items-center'>

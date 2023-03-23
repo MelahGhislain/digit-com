@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import {DrawerProps} from './_utils'
 import { BsChevronLeft, BsChevronRight, BsX } from 'react-icons/bs'
+import Logo from './logo'
 
 const NavDrawer: React.FC<DrawerProps> = ({open, setOpen}) => {
 
@@ -28,7 +29,7 @@ const NavDrawer: React.FC<DrawerProps> = ({open, setOpen}) => {
         >
           <div className=''>
             <div className='flex justify-between items-center px-3 py-[1.20rem] bg-slate-900 text-white'>
-              <p className='text-2xl md:text-3xl font-bold'>Digitic.</p>
+              <Logo />
               <span className='text-3xl ' onClick={shouldCloseDrawer}>
                 <BsX />
               </span>

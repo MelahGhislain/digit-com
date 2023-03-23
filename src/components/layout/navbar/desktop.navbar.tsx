@@ -4,6 +4,7 @@ import {BsArrowRepeat} from 'react-icons/bs'
 import {IoPersonOutline, } from 'react-icons/io5'
 import {HiOutlineShoppingCart} from 'react-icons/hi'
 import {IoMdArrowDropdown, IoMdArrowDropup} from 'react-icons/io'
+import Logo from './logo'
 import Link from 'next/link'
 import SearchBar from '../../searchBar'
 
@@ -31,7 +32,7 @@ const DesktopNavbar = () => {
         }
 
         <div className={`bg-slate-900 flex items-center justify-between pad-x border-t border-slate-800 py-4 ${wasScrolled? 'fixed top-0 w-screen z-50': ""}`}>
-          <div className='text-xl font-bold'>Digitic.</div>
+          <Logo />
           <div className='bg-red-500 w-[25rem]'>
             <SearchBar />
           </div>

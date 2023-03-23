@@ -6,6 +6,7 @@ import {BsArrowRepeat} from 'react-icons/bs'
 import { IoPersonOutline } from 'react-icons/io5'
 import {HiShoppingCart, HiOutlineShoppingCart, HiHome} from 'react-icons/hi'
 import Link from 'next/link'
+import Logo from './logo'
 
 const MobileNavbar: React.FC<MobileNavbarProps> = ({children, openDrawer, setOpenDrawer}) => {
 
@@ -17,9 +18,7 @@ const MobileNavbar: React.FC<MobileNavbarProps> = ({children, openDrawer, setOpe
     <div >
         <nav className='bg-slate-900 text-white pad-x py-6'>
             <div className=' flex justify-between'>
-                <h4 className='text-xl font-bold'>
-                    Digitic.
-                </h4>
+                <Logo />
                 <div className='flex gap-4 text-2xl'>
                     <span className='cursor-pointer transition-all duration-300 hover:opacity-40'>
                         <FiSearch />
