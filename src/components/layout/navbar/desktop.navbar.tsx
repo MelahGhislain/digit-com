@@ -82,13 +82,13 @@ const DesktopNavbar = () => {
                 <Link href='/' className='transition-all duration-300 hover:underline'>
                   <li className='py-4 px-4'>Home</li>
                 </Link>
-                <Link href='/' className='transition-all duration-300 hover:underline'>
+                <Link href='/products?type=all' className='transition-all duration-300 hover:underline'>
                   <li className='py-4 px-4'>Product</li>
                 </Link>
-                <Link href='/' className='transition-all duration-300 hover:underline'>
+                <Link href='/blog' className='transition-all duration-300 hover:underline'>
                   <li className='py-4 px-4'>Blog</li>
                 </Link>
-                <Link href='/' className='transition-all duration-300 hover:underline'>
+                <Link href='/contact' className='transition-all duration-300 hover:underline'>
                   <li className='py-4 px-4'>Contact</li>
                 </Link>
               

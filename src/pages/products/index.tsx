@@ -4,9 +4,11 @@ import  {
   Layout,
   QuickNavbar,
   CollectionCard1,
+  RatingStars,
 }  from '@components'
 import Link from 'next/link';
 import { collectionData } from '../../components/features/home/_utils';
+import Image from 'next/image';
 const category = [
     {name: 'Speaker'},
     {name: 'Head sets'},
@@ -32,7 +34,7 @@ export default function Product() {
                             <ul>
                                 {
                                     category.map(item => (
-                                        <Link key={item.name} href='/speaker'>
+                                        <Link key={item.name} href='/products?type=speaker'>
                                             <li className='text-sm my-1 py-1 text-slate-500 '>{item.name}</li>
                                         </Link>
 
@@ -54,11 +56,28 @@ export default function Product() {
                         {/* Related product */}
                         <div className='rounded bg-white w-full p-4 mt-4'>
                             <h2 className='text-lg font-semibold'>Related Products</h2>
-                            <ul>
-                                
+                            <ul className='max-h-[25rem] overflow-auto'>
+                                {
+                                    collectionData.map(item => (
+                                        <li key={item.id} className="py-2 ">
+                                            <div className='flex gap-x-3 items-center '>
+                                                <span className=''>
+                                                    <Image src={item.image} alt='items' className='w-14 h-14'/>
+                                                </span>
+                                                <div className='flex flex-col'>
+                                                    <h2 className='font-semibold text-sm'>{item.title}</h2>
+                                                    <p className='text-sm font-light'>$ {item.price}</p>
+                                                    <RatingStars rating={item.rating} className='text-xs' />
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                    ))
+                                }
                             </ul>
                         </div>
                     </section>
+                    
                     <section className='flex-1 my-4'>
                         <div className='py-1 flex justify-between bg-white rounded px-2'>
                             <div className='flex items-center'>
