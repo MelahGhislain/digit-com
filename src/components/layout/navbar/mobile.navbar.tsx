@@ -6,7 +6,7 @@ import {BsArrowRepeat} from 'react-icons/bs'
 import { IoPersonOutline } from 'react-icons/io5'
 import {HiShoppingCart, HiOutlineShoppingCart, HiHome} from 'react-icons/hi'
 import Link from 'next/link'
-import Logo from './logo'
+import Logo from '../logo'
 
 const MobileNavbar: React.FC<MobileNavbarProps> = ({children, openDrawer, setOpenDrawer}) => {
 

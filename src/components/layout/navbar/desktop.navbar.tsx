@@ -4,7 +4,7 @@ import {BsArrowRepeat} from 'react-icons/bs'
 import {IoPersonOutline, } from 'react-icons/io5'
 import {HiOutlineShoppingCart} from 'react-icons/hi'
 import {IoMdArrowDropdown, IoMdArrowDropup} from 'react-icons/io'
-import Logo from './logo'
+import Logo from '../logo'
 import Link from 'next/link'
 import SearchBar from '../../searchBar'
 

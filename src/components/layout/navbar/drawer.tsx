@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import {DrawerProps} from './_utils'
 import { BsChevronLeft, BsChevronRight, BsX } from 'react-icons/bs'
-import Logo from './logo'
+import Logo from '../logo'
 
 const NavDrawer: React.FC<DrawerProps> = ({open, setOpen}) => {
 

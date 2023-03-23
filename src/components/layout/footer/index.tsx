@@ -4,6 +4,7 @@ import Link from 'next/link'
 import React from 'react'
 import { BsFacebook, BsTwitter, BsYoutube } from 'react-icons/bs'
 import SearchBar from '../../searchBar'
+import Logo from '../logo'
 
 const Footer = () => {
   return (
@@ -20,8 +21,8 @@ const Footer = () => {
             </div>
             <div className='pad-x border-t border-slate-700 py-6 grid grid-cols-2 gap-8 md:gap-0 justify-items-center md:flex md:justify-between'>
                 <div className='text-center md:text-start'>
-                    <h2 className='font-bold'>Contact US</h2>
-                    <ul className='mt-4 text-neutral-400'>
+                    <Logo />
+                    <ul className='mt-3 text-neutral-400'>
                         <li className='my-1 text-sm'>Douala Cameroon</li>
                         <li className='my-1 text-sm'>(+237) 675909367</li>
                         <li className='my-1 text-sm'>melahghislain17@gmail.com</li>
