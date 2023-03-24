@@ -16,7 +16,10 @@ const DesktopCart: React.FC<DesktopCartProp> = ({data}) => {
                     <table className="min-w-full text-left text-sm font-light">
                         <thead className="border-b font-medium ">
                             <tr>
-                                <th scope="col" className="py-4 text-left">Product</th>
+                                <th scope="col" className="py-4 text-left flex items-center gap-2">
+                                    <input id="link-checkbox" type="checkbox" value="" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:outline-none" />
+                                    <span>Product</span>
+                                </th>
                                 <th scope="col" className="py-4 text-center">Quantity</th>
                                 <th scope="col" className="py-4 text-right">Price</th>
                             </tr>
@@ -26,7 +29,7 @@ const DesktopCart: React.FC<DesktopCartProp> = ({data}) => {
                                 data.map((item, index) => (
                                     <tr key={item.id} className={`transition duration-300 ease-in-out border-b `}>
                                         <td className="whitespace-nowrap py-4 ">
-                                            <CartItem title={item.title} price={item.price} image={item.image} rating={item.rating} />
+                                            <CartItem checkbox title={item.title} price={item.price} image={item.image} rating={item.rating} />
                                         </td>
                                         <td className="whitespace-nowrap py-4 flex items-center justify-center"><CartButton numOfItems={2} /></td>
                                         <td className="whitespace-nowrap py-4 font-semibold text-right">$2.500</td>

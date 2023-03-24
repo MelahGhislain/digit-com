@@ -1,8 +1,6 @@
-import Image from 'next/image';
 import React from 'react'
-import { CategoryItem, collectionData, collectionResponsive } from './_utils';
-import Link from 'next/link';
-import Carousel from 'react-multi-carousel';
+import {  collectionData, } from './_utils';
+import {Carousel, WrapCarouselItem} from '../../carousel';
 import {CollectionCard1, CollectionCard2} from '../../cards';
 import Heading from '../../heading'
 
@@ -13,34 +11,35 @@ const Collection = () => {
     <section className='pad-x mt-10'>
         <Heading>Feteaure Collection</Heading>
         <div className='mb-10'>
-            {/* <div className='hidden xl:block'>
-                
-                <Carousel 
-                    responsive={collectionResponsive}
-                >
+                <Carousel gap='gap-2'>
                     {
-                        collectionData.map(item => (
-                            <CollectionCard1 key={item.id} data={item} />
+                        collectionData.map((item, index) => (
+                            <WrapCarouselItem  
+                                key={item.id}
+                                itemHeight='h-[20rem] md:h-[24rem]'
+                                itemWidth='w-[15rem] md:w-[16rem] '
+                            >
+                                <CollectionCard1 data={item} />
+                            </WrapCarouselItem>
                         ))
                     }
                 </Carousel>
-            </div> */}
-            <div className=' flex items-center overflow-x-auto gap-6 py-4'>
-                    {
-                        collectionData.map(item => (
-                            <CollectionCard1 key={item.id} data={item} />
-                        ))
-                    }
-            </div>
+        
         </div>
         <div>
-            <div className='flex items-center overflow-x-auto gap-6 py-4'>
+            <Carousel gap='gap-2'>
                     {
                         collectionData.map((item, index) => (
-                            <CollectionCard2 key={item.id} data={item} isDark={!index} />
+                            <WrapCarouselItem  
+                                key={item.id}
+                                itemHeight='  h-[18rem] md:h-[20rem]'
+                                itemWidth='w-[14rem] md:w-[16rem]'
+                            >
+                                <CollectionCard2 key={item.id} data={item} isDark={!index} />
+                            </WrapCarouselItem>
                         ))
                     }
-            </div>
+                </Carousel>
         </div>
     </section>
   )

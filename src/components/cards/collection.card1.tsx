@@ -35,7 +35,7 @@ const CollectionCard1: React.FC<CollectionItemProp> = ({data, className, priceTo
         </div>
         <p className='text-sm line-clamp-2 my-2 text-slate-600'>{data.description}</p>
         <RatingStars rating={3} />
-        <div className={`text-gray-600 text-medium`}>
+        <div className={`text-gray-600 text-medium text-start`}>
         {!priceTop && <p>${data.price}</p>}
         </div>
       </div>

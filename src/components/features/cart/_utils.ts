@@ -5,6 +5,8 @@ export interface CardItemProp {
     price: string
     title: string
     rating: number
+    checkbox?: boolean
+    isChecked?: boolean
 }
 export interface CardButtonProp {
     numOfItems: number

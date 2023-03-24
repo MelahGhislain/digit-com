@@ -5,6 +5,7 @@ import {CollectionCard1} from '../../cards';
 import { CollectionWatch } from '@assets';
 import Image from 'next/image';
 import Link from 'next/link';
+import {Carousel, WrapCarouselItem} from '../../carousel';
 
 const PopularProduct = () => {
   return (
@@ -12,7 +13,11 @@ const PopularProduct = () => {
        <Heading>Popular Products</Heading>
         <div>
             <div className='mb-10'>
-                <div className=' flex items-center overflow-x-scroll gap-6 py-5'>
+                <Carousel gap='gap-2'>
+                    <WrapCarouselItem 
+                        itemHeight='h-[20rem] md:h-[24rem]'
+                        itemWidth='w-[15rem] md:w-[16rem] ' 
+                    >
                         <div className='bg-white w-[15rem] md:w-[16rem] rounded-lg flex-none'>
                             <div className='flex flex-col p-4 overflow-auto gap-y-4 h-[20rem] md:h-[24rem]'>
                                 {
@@ -29,14 +34,25 @@ const PopularProduct = () => {
                                 }
                             </div>
                         </div>
-
+                    </WrapCarouselItem>
+                    <WrapCarouselItem 
+                        itemHeight='h-[20rem] md:h-[24rem]'
+                        itemWidth='w-[15rem] md:w-[16rem] ' 
+                    >
                         <Card />
-                        {
-                            collectionData.map(item => (
-                                <CollectionCard1 key={item.id} data={item} />
-                            ))
-                        }
-                </div>
+                    </WrapCarouselItem>
+                    {
+                        collectionData.map((item, index) => (
+                            <WrapCarouselItem  
+                                key={item.id}
+                                itemHeight='h-[20rem] md:h-[24rem]'
+                                itemWidth='w-[15rem] md:w-[16rem] ' 
+                            >
+                                <CollectionCard1 data={item} />
+                            </WrapCarouselItem>
+                        ))
+                    }
+                </Carousel>
             </div>
         </div>
     </section>

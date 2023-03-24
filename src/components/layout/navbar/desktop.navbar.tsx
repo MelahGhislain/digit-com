@@ -7,9 +7,12 @@ import {IoMdArrowDropdown, IoMdArrowDropup} from 'react-icons/io'
 import Logo from '../logo'
 import Link from 'next/link'
 import SearchBar from '../../searchBar'
+import Select from "react-tailwindcss-select";
+import { SelectValue } from 'react-tailwindcss-select/dist/components/type'
 
 const DesktopNavbar = () => {
   const [wasScrolled, serWasScrolled] = useState<boolean>(false)
+  const [selectedCategory, setSelectedCategory] = useState<SelectValue>(null)
   useEffect(()=>{
     window.onscroll = () => {
       serWasScrolled(window.pageYOffset === 0? false: true)
@@ -17,6 +20,16 @@ const DesktopNavbar = () => {
     }
   }, [])
 
+  const options = [
+    { value: "fox", label: "🦊 Fox" },
+    { value: "Butterfly", label: "🦋 Butterfly" },
+    { value: "Honeybee", label: "🐝 Honeybee" }
+  ];
+
+  const handleChange = (value: SelectValue) => {
+    console.log("value:", value);
+    setSelectedCategory(value);
+  }
   return (
     <>
       <nav className='bg-slate-800 text-white w-screen'>
@@ -77,7 +90,19 @@ const DesktopNavbar = () => {
 
         { !wasScrolled &&
           <div className='flex pad-x gap-8 items-center'>
-          <div className='w-[10rem]'>category</div>
+          <div className='w-[20rem]'>
+            <Select
+              value={selectedCategory}
+              onChange={handleChange}
+              options={options}
+              primaryColor='yellow'
+              isSearchable
+              placeholder='Category'
+              isClearable
+              // loading
+              // isGroupOption
+            />
+          </div>
           <div>
             <ul className='flex py-2 gap-2'>
                 <Link href='/' className='transition-all duration-300 hover:underline'>
