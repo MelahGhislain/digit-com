@@ -3,23 +3,19 @@ import 'react-multi-carousel/lib/styles.css';
 import  {
   Layout,
   QuickNavbar,
-  CartButton,
-  CartItem,
   SpecialProductCard,
   Heading,
   DesktopCart,
   MobileCart
 }  from '@components'
-import { BsTrash, BsTrash2 } from 'react-icons/bs';
-import Image from 'next/image';
-import { CategoryCamera } from '@assets';
+import { BsTrash } from 'react-icons/bs';
 import { collectionData } from '../../components/features/home/_utils';
 
 export default function Cart() {
   return (
     <>
       <Head>
-        <title>Delux | products</title>
+        <title>indecor. | products</title>
         <meta name="description" content="ecommerce for furnitures" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />

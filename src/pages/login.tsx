@@ -1,6 +1,7 @@
 import { InputField } from '@components'
 import { loginValidation } from '@utils'
 import { useFormik } from 'formik'
+import { useRouter } from 'next/router';
 import React, { ChangeEvent } from 'react'
 
 interface LoginProp {
@@ -14,11 +15,12 @@ const initialValues: LoginProp ={
 }
 
 const Login = () => {
-
+    const router = useRouter()
     const handleSubmit = ( values: LoginProp) => {
       
         console.log({values})
         // formik.handleReset()
+        router.push('/')
     }
 
   const formik = useFormik({

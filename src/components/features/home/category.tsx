@@ -2,12 +2,13 @@ import Image from 'next/image';
 import React from 'react'
 import { catogoryItems } from './_utils';
 import Link from 'next/link';
+import Heading from '../../heading';
 
 const Category = () => {
 
   return (
     <section className='pad-x'>
-        <h2 className='md:hidden mb-8 mt-6 font-semibold text-3xl'> Category</h2>
+        <Heading> Category</Heading>
         <div className='rounded-lg bg-white p-6'>
             <div className='flex overflow-x-auto lg:grid lg:grid-cols-5 justify-start gap-4'>
                 {

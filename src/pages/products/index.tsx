@@ -19,7 +19,7 @@ export default function Product() {
   return (
     <>
       <Head>
-        <title>Delux | products</title>
+        <title>indecor. | products</title>
         <meta name="description" content="ecommerce for furnitures" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />

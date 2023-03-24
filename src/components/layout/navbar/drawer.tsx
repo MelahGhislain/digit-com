@@ -50,6 +50,9 @@ const NavDrawer: React.FC<DrawerProps> = ({open, setOpen}) => {
                   <Link href='/blog' onClick={()=>setOpen(false)}>
                       <li className='px-3 py-3 border-b border-black/5'>Blog</li>
                   </Link>
+                  <Link href='/blog' onClick={()=>setOpen(false)}>
+                      <li className='px-3 py-3 border-b border-black/5'>About</li>
+                  </Link>
                   <Link href='/contact' onClick={()=>setOpen(false)}>
                       <li className='px-3 py-3 border-b border-black/5'>Contact</li>
                   </Link>

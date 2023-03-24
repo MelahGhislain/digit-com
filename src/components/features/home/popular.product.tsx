@@ -13,8 +13,8 @@ const PopularProduct = () => {
         <div>
             <div className='mb-10'>
                 <div className=' flex items-center overflow-x-scroll gap-6 py-5'>
-                        <div className='bg-white w-[15rem] md:w-[16rem] h-[20rem] md:h-[24rem] rounded-lg flex-none'>
-                            <div className='flex flex-col p-4 overflow-auto gap-y-4 h-full'>
+                        <div className='bg-white w-[15rem] md:w-[16rem] rounded-lg flex-none'>
+                            <div className='flex flex-col p-4 overflow-auto gap-y-4 h-[20rem] md:h-[24rem]'>
                                 {
                                     catogoryItems.map(item => (
                                         <Link key={item.id} href='/'>

@@ -5,7 +5,7 @@ import {BlogCard} from '../../cards'
 const Blogs = () => {
   return (
     <section className='pad-x'>
-        <Heading>Feteaure Collection</Heading>
+        <Heading>Blogs</Heading>
         <div className='mb-10'>
             <div className=' flex items-center overflow-x-scroll gap-6 py-5'>
                 <BlogCard />
