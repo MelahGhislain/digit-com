@@ -9,7 +9,6 @@ import  {
   ServiceCard, 
   SpecialProduct, 
   Blogs, 
-  Carousel
 }  from '@components'
 import { Service1, Service2, Service3, Service5 } from '@assets';
 
@@ -65,7 +64,6 @@ export default function Home() {
             <SpecialProduct />
             <PopularProduct />
             <Blogs />
-            <Carousel />
           </Layout>
       </main>
     </>
