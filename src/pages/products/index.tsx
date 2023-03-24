@@ -9,6 +9,7 @@ import  {
 import Link from 'next/link';
 import { collectionData } from '../../components/features/home/_utils';
 import Image from 'next/image';
+
 const category = [
     {name: 'Speaker'},
     {name: 'Head sets'},
@@ -53,6 +54,7 @@ export default function Product() {
                                 }
                                 <li>
                                     <h2 className='font-semibold'>Price</h2>
+                                    {/* <MultiRangeSlider /> */}
                                 </li>
                             </ul>
                         </div>
@@ -106,3 +108,4 @@ export default function Product() {
     </>
   )
 }
+
