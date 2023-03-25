@@ -2,7 +2,7 @@ import { InputField } from '@components'
 import { loginValidation } from '@utils'
 import { useFormik } from 'formik'
 import { useRouter } from 'next/router';
-import React, { ChangeEvent } from 'react'
+import React from 'react'
 
 interface LoginProp {
     email: string;

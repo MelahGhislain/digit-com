@@ -5,9 +5,10 @@ import { CollectionItem } from '../../cards/_utils'
 
 type DesktopCartProp = {
     data: CollectionItem[]
+    handleCheckout?: ()=> void
 }
 
-const DesktopCart: React.FC<DesktopCartProp> = ({data}) => {
+const DesktopCart: React.FC<DesktopCartProp> = ({data, handleCheckout}) => {
   return (
     <div className="hidden md:flex flex-col pb-4">
         <div className="overflow-x-auto ">
@@ -41,8 +42,8 @@ const DesktopCart: React.FC<DesktopCartProp> = ({data}) => {
                                 <td className="whitespace-nowrap py-4 "></td>
                                 <td className="whitespace-nowrap py-4 flex items-center justify-center text-lg">Total: <strong className='ml-2 font-bold'> $2250.99</strong></td>
                                 <td className="whitespace-nowrap py-4 font-semibold text-right">
-                                    <button className='bg-slate-900 rounded text-white px-5 py-2 transition-all duration-300 hover:opacity-80'>
-                                        Order now
+                                    <button onClick={handleCheckout} className='bg-slate-900 rounded text-white px-5 py-2 transition-all duration-300 hover:opacity-80'>
+                                        Checkout
                                     </button>
                                 </td>
                             </tr>

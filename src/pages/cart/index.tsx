@@ -10,8 +10,14 @@ import  {
 }  from '@components'
 import { BsTrash } from 'react-icons/bs';
 import { collectionData } from '../../components/features/home/_utils';
+import { useRouter } from 'next/router';
 
 export default function Cart() {
+    const router = useRouter()
+
+    const handleCheckout = () => {
+        router.push('/checkout')
+    }
   return (
     <>
       <Head>
@@ -34,7 +40,7 @@ export default function Cart() {
                                 </button>
                             </div>
 
-                            <DesktopCart data={collectionData} />
+                            <DesktopCart data={collectionData} handleCheckout={handleCheckout} />
                             {
                                 collectionData.map(item => (
                                     <MobileCart key={item.id} data={item} numOfItems={2}/>
@@ -45,7 +51,7 @@ export default function Cart() {
                                     <p>Total Cost:</p>
                                     <p className='font-bold'>$250.99</p>
                                 </div>
-                                <button className='w-full bg-slate-900 text-white text-sm py-3 '>Order now</button>
+                                <button onClick={handleCheckout} className='w-full bg-slate-900 text-white text-sm py-3 '>Checkout</button>
                             </div>
                         </div>
                     </section>

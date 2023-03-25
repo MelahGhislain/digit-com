@@ -6,7 +6,7 @@ import Logo from '../logo'
 
 const NavDrawer: React.FC<DrawerProps> = ({open, setOpen}) => {
 
-  const [displayCategory, setDisplayCategory] = useState<boolean>(false)
+  const [displayCategory, setDisplayCategory] = useState<boolean>(true)
   const shouldDisplayCategory = () => {
     setDisplayCategory(currentState => !currentState)
   }
@@ -47,6 +47,9 @@ const NavDrawer: React.FC<DrawerProps> = ({open, setOpen}) => {
              
               { displayCategory &&
                 <>
+                  <Link href='/order' onClick={()=>setOpen(false)}>
+                      <li className='px-3 py-3 border-b border-black/5'>Orders</li>
+                  </Link>
                   <Link href='/blog' onClick={()=>setOpen(false)}>
                       <li className='px-3 py-3 border-b border-black/5'>Blog</li>
                   </Link>
