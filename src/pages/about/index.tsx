@@ -1,9 +1,16 @@
 import {Heading, Layout, QuickNavbar} from '@components'
 import Head from 'next/head'
 import Image from 'next/image'
+import { AboutBanner } from '@assets'
+import { useEffect } from 'react'
 
 
 export default function AboutUs() {
+
+  useEffect(()=>{
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+  },[])
+
   return (
     <>
       <Head>
@@ -15,10 +22,10 @@ export default function AboutUs() {
       <main className='bg-slate-100'>
           <Layout>
             <QuickNavbar links={['Home', 'About']}/>
-            <div className='pad-x py-20'>
-              <section>
-                  hero image
-              </section>
+            <div className='pad-x pb-20 pt-16'>
+              <div className='w-full h-[12rem] md:h-[20rem] lg:h-[28rem]'>
+                  <Image src={AboutBanner} alt="banner" className='w-full h-full object-cover' />
+              </div>
               <section>
                   <Heading>WELCOME TO INDECOR.</Heading>
 

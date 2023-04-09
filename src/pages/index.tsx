@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import Head from 'next/head'
 import 'react-multi-carousel/lib/styles.css';
 import  { 
@@ -41,6 +42,9 @@ const ServiceItems = [
 
 
 export default function Home() {
+  useEffect(()=>{
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+  },[])
   return (
     <>
       <Head>

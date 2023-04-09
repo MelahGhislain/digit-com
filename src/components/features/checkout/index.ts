@@ -1,1 +1,1 @@
-export {default as CheckoutForm} from './checkout.form'
+export {default as Checkout} from './checkout'

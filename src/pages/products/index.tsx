@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import Head from 'next/head'
 import 'react-multi-carousel/lib/styles.css';
 import  {
@@ -17,6 +18,11 @@ const category = [
 ]
 
 export default function Product() {
+    
+    useEffect(()=>{
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+    },[])
+
   return (
     <>
       <Head>

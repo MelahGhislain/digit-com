@@ -16,7 +16,7 @@ const QuickNavbar: React.FC<QuickNavbarProp> = ({links}) => {
                 }
                return (
                     <>
-                        <Link href={ navlink === 'home'? '/': navlink } className='transition-all duration-300 hover:underline hover:text-slate-800'>
+                        <Link key={link} href={ navlink === 'home'? '/': navlink } className='transition-all duration-300 hover:underline hover:text-slate-800'>
                             <div> {link} </div>
                         </Link>
                         <span className='mx-1'>/</span>

@@ -7,6 +7,10 @@ import CardBanner2 from './catbanner-02.jpg'
 import CardBanner3 from './catbanner-03.jpg'
 import CardBanner4 from './catbanner-04.jpg'
 
+// about banner
+import HomeBanner from './home3-banner1.jpg'
+import AboutBanner from './about-banner.jpg'
+
 // Services
 import Service1 from './service.png'
 import Service2 from './service-02.png'
@@ -37,6 +41,10 @@ export {
     CardBanner2,
     CardBanner3,
     CardBanner4,
+
+    // About banner
+    HomeBanner,
+    AboutBanner,
 
     // Services
     Service1,

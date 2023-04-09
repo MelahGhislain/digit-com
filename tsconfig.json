@@ -15,8 +15,8 @@
     "jsx": "preserve",
     "incremental": true,
     "paths": {
-      "@components": ["./src/components", "./src/components/*"],
-      "@services": ["./src/services", "./src/services/*"],
+      "@components": ["./src/components"],
+      "@services": ["./src/services", ],
       "@utils": ["./src/utils", "./src/utils/*"],
       "@assets": ["./src/assets"]
     }

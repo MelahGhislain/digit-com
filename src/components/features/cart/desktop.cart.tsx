@@ -6,11 +6,12 @@ import { CollectionItem } from '../../cards/_utils'
 type DesktopCartProp = {
     data: CollectionItem[]
     handleCheckout?: ()=> void
+    // numOfItems: number
 }
 
-const DesktopCart: React.FC<DesktopCartProp> = ({data, handleCheckout}) => {
+const DesktopCart: React.FC<DesktopCartProp> = ({data, handleCheckout, }) => {
   return (
-    <div className="hidden md:flex flex-col pb-4">
+    <div className="hidden md:flex flex-col pb-4 bg-white px-6">
         <div className="overflow-x-auto ">
             <div className="inline-block min-w-full py-2 ">
                 <div className="overflow-hidden">
@@ -18,7 +19,7 @@ const DesktopCart: React.FC<DesktopCartProp> = ({data, handleCheckout}) => {
                         <thead className="border-b font-medium ">
                             <tr>
                                 <th scope="col" className="py-4 text-left flex items-center gap-2">
-                                    <input id="link-checkbox" type="checkbox" value="" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:outline-none" />
+                                    {/* <input id="link-checkbox" type="checkbox" value="" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:outline-none" /> */}
                                     <span>Product</span>
                                 </th>
                                 <th scope="col" className="py-4 text-center">Quantity</th>
@@ -30,7 +31,7 @@ const DesktopCart: React.FC<DesktopCartProp> = ({data, handleCheckout}) => {
                                 data.map((item, index) => (
                                     <tr key={item.id} className={`transition duration-300 ease-in-out border-b `}>
                                         <td className="whitespace-nowrap py-4 ">
-                                            <CartItem checkbox title={item.title} price={item.price} image={item.image} rating={item.rating} />
+                                            <CartItem title={item.title} price={item.price} image={item.image} rating={item.rating} />
                                         </td>
                                         <td className="whitespace-nowrap py-4 flex items-center justify-center"><CartButton numOfItems={2} /></td>
                                         <td className="whitespace-nowrap py-4 font-semibold text-right">$2.500</td>

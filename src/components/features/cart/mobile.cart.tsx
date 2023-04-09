@@ -11,9 +11,11 @@ type MobileCart = {
 
 const MobileCart: React.FC<MobileCart> = ({data, numOfItems}) => {
   return (
-    <div className='flex justify-between md:hidden border-b py-4 items-center'>
+    <div className='flex justify-between md:hidden border-b py-4 items-center bg-white mb-2 rounded overflow-hidden'>
         <CartItem image={data.image} rating={data.rating} title={data.title} price={data.price} />
-        <CartButton numOfItems={numOfItems} />
+        <div className='mr-1'>
+          <CartButton numOfItems={numOfItems} />
+        </div>
     </div>
   )
 }

@@ -1,3 +1,5 @@
+import { Dispatch, SetStateAction } from "react"
+
 export interface BillingProps {
     firstName: string
     lastName: string
@@ -28,4 +30,8 @@ export const initialValues: BillingProps ={
     deliveryDate: '',
     deliveryTime: '',
     description: ''
+}
+
+export interface CheckoutProps {
+    updateStep: Dispatch<SetStateAction<number>>
 }

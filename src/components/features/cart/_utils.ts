@@ -1,4 +1,5 @@
 import { StaticImageData } from "next/image"
+import { Dispatch, SetStateAction } from "react"
 
 export interface CardItemProp {
     image: StaticImageData
@@ -10,4 +11,8 @@ export interface CardItemProp {
 }
 export interface CardButtonProp {
     numOfItems: number
+}
+
+export interface CartProps {
+    updateStep: Dispatch<SetStateAction<number>>
 }
